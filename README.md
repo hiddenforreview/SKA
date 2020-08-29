@@ -11,8 +11,7 @@ Anonymous repository for Semi-Supervised Knowledge Amalgamation for Sequence Cla
 
 Run script as:
 
-  python main.py -t_model t1.sav t2.sav -t_numclass 3 3 -t_class 0 1 2 3 4 5 -lr -ep -bs -layers -hiddim -inputsize
-
+  python main.py -t_model t1.sav t2.sav -t_numclass 3 3 -t_class 0 1 2 3 4 5 
 Required parameters:
 
 + __-t_model__ a list of teacher models
