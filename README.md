@@ -17,7 +17,7 @@ Required parameters:
 
 + __-t_model__ a list of teacher models
 + __-t_numclass__ the number of classes corresponding to t_model
-+ __-t_class__ a list of specialized classes of each teacher 
++ __-t_class__ a list of specialized classes of each teacher, concatenated in correspond to t_model , e.g., t1_class: 0 1 2 and t2_class: 3 4 5, then t_class: 0 1 2 3 4 5
 
 Hyperparameters:
 + __-lr__ learning rate, default 0.001
