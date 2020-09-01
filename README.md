@@ -1,10 +1,10 @@
-# TCom for SKA
-Anonymous repository for Semi-Supervised Knowledge Amalgamation for Sequence Classification via Teacher Communication 
+# TC for SKA
+Anonymous repository for Semi-Supervised Knowledge Amalgamation for Sequence Classification via Teacher Coordinator (TC) 
 
 ## File listing
 
-+ __model.py__ The main code implementation of TCom
-+ __main.py__ Code for training TCom
++ __model.py__ The main code implementation of TC
++ __main.py__ Code for training TC
 + __utils.py__ All supporting functions
 
 ## Instructions on training TCom
