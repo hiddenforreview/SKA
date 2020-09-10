@@ -21,10 +21,11 @@ Required parameters:
 + __-data_label__ the student training data file with labels
 + __-data_unlabel__ the student training data file with no label
 
-Hyperparameters:
+Parameters:
 + __-lr__ learning rate, default 0.001
 + __-ep__ epochs, default 200
 + __-bs__ batch size, default 8
 + __-layers__ #layers, default 2
 + __-hiddim__ #hidden units, default 8
 + __-inputsize__ #features, default 1
++ __--save__ boolean parameters, whether to save the student model
