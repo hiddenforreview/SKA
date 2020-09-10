@@ -11,7 +11,9 @@ Anonymous repository for Semi-Supervised Knowledge Amalgamation for Sequence Cla
 
 Run script as:
 
-  python main.py -t_model ./teachers/t1.sav ./teachers/t2.sav -t_numclass 3 3 -t_class 0 1 2 3 2 3 4 5 -s_class 0 1 2 3 4 5 -data_label ./data/labeled_data.txt -data_unlabel ./data/unlabeled_data.txt -expname 'test'
+  python main.py -expname 'test' -t_model ./teachers/t1.sav ./teachers/t2.sav -t_numclass 3 3 -t_class 0 1 2 3 2 3 4 5 -s_class 0 1 2 3 4 5 -data ./data/syn_test.txt 
+  
+%data_label ./data/labeled_data.txt -data_unlabel ./data/unlabeled_data.txt -expname 'test'
   
 Required parameters:
 
