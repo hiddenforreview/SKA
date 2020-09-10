@@ -11,7 +11,7 @@ Anonymous repository for Semi-Supervised Knowledge Amalgamation for Sequence Cla
 
 Run script as:
 
-  python main.py -t_model t1.sav t2.sav -t_numclass 3 3 -t_class 0 1 2 3 4 5 -data_label ./data/labeled_data.txt -data_unlabel ./data/unlabeled_data.txt
+  python main.py -t_model t1.sav t2.sav -t_numclass 3 3 -t_class 0 1 2 3 4 5 -data_label ./data/labeled_data.txt -data_unlabel ./data/unlabeled_data.txt -expname 'test'
   
 Required parameters:
 
@@ -20,6 +20,7 @@ Required parameters:
 + __-t_class__ a list of specialized classes of each teacher, concatenated in correspond to t_model , e.g., t1_class: 0 1 2 and t2_class: 3 4 5, then t_class: 0 1 2 3 4 5
 + __-data_label__ the student training data file with labels
 + __-data_unlabel__ the student training data file with no label
++ __-expname__ experiment name
 
 Parameters:
 + __-lr__ learning rate, default 0.001
@@ -28,4 +29,4 @@ Parameters:
 + __-layers__ #layers, default 2
 + __-hiddim__ #hidden units, default 8
 + __-inputsize__ #features, default 1
-+ __--save__ boolean parameters, whether to save the student model
++ __--save__ boolean parameters, whether to save the student model, default false
