@@ -9,13 +9,13 @@ Anonymous repository for Semi-Supervised Knowledge Amalgamation for Sequence Cla
 
 ## Instructions on training TCom
 
-####Run script as:
+###Run script as:
 
   python main.py -expname 'test' -t_model ./teachers/t1.sav ./teachers/t2.sav -t_numclass 4 4 -t_class 1 2 3 4 3 4 5 6 -s_class 1 2 3 4 5 6 -data ./data/syn_test.txt 
   
 <!-- data_label ./data/labeled_data.txt -data_unlabel ./data/unlabeled_data.txt -expname 'test'-->
   
-####Required parameters:
+###Required parameters:
 
 + __-t_model__ a list of paths of teacher models 
 + __-t_numclass__ the number of classes corresponding to t_model
@@ -26,7 +26,7 @@ Anonymous repository for Semi-Supervised Knowledge Amalgamation for Sequence Cla
 <!-- + __-data_label__ the student training data file with labels
 + __-data_unlabel__ the student training data file with no label -->
 
-####Parameters:
+###Parameters:
 
 Student network:
 + __-lr__ learning rate, default 0.01
