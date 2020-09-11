@@ -3,9 +3,9 @@ Anonymous repository for Semi-Supervised Knowledge Amalgamation for Sequence Cla
 
 ## File listing
 
-+ __model.py__ : The main code implementation of TC
-+ __main.py__ : Code for training TC
-+ __utils.py__ : All supporting functions
++ __main.py__ : Main code for TC training
++ __model.py__ : Supporting models
++ __utils.py__ : Supporting functions
 
 ## Instructions on training TCom
 
@@ -28,21 +28,21 @@ Run script as:
   + __-data_unlabel__ the student training data file with no label -->
 
 + __Student network:__
-  + __-lr__ learning rate, default 0.01
-  + __-ep__ epochs, default 200
-  + __-bs__ batch size, default 8
-  + __-layers__ #layers, default 2
-  + __-hiddim__ #hidden units, default 8
+  + __-lr__ : learning rate, default 0.01
+  + __-ep__ : epochs, default 200
+  + __-bs__ : batch size, default 8
+  + __-layers__ : #layers, default 2
+  + __-hiddim__ : #hidden units, default 8
 
 + __TTL network:__
-  + __-lrTTL__ learning rate, default 0.01
-  + __-epTTL__ epochs, default 500
-  + __-bsTTL__ batch size, default 8
-  + __-layersTTL__ #layers, default 2
-  + __-hiddimTTL__ #hidden units, default 8
+  + __-lrTTL__ : learning rate, default 0.01
+  + __-epTTL__ : epochs, default 500
+  + __-bsTTL__ : batch size, default 8
+  + __-layersTTL__ : #layers, default 2
+  + __-hiddimTTL__ : #hidden units, default 8
 
 + __Others:__
-  + __-inputsize__ #features, default 1
-  + __-seed__ set seed for reproduction, default 0
-  + __-plabel__ propotion of available labeled data (range = [0,1]), default 0.2
-  + __--save__ boolean parameters, whether to save the student model, default false
+  + __-inputsize__ : #features, default 1
+  + __-seed__ : set seed for reproduction, default 0
+  + __-plabel__ : propotion of available labeled data (range = [0,1]), default 0.2
+  + __--save__ : boolean parameters, whether to save the student model, default false
