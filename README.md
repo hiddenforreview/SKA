@@ -33,4 +33,6 @@ Parameters:
 + __-layers__ #layers, default 2
 + __-hiddim__ #hidden units, default 8
 + __-inputsize__ #features, default 1
++ __-seed__ set seed for reproduction
++ __-label__ propotion of available labeled data, range = [0,1]
 + __--save__ boolean parameters, whether to save the student model, default false
