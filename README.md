@@ -15,7 +15,9 @@ Run script as:
   
 <!-- data_label ./data/labeled_data.txt -data_unlabel ./data/unlabeled_data.txt -expname 'test'-->
   
-<b>Required parameters:</b>
+<b>Parameters:</b>
+
+<i>Required:</i>
 
 + __-t_model__ a list of paths of teacher models 
 + __-t_numclass__ the number of classes corresponding to t_model
@@ -26,23 +28,21 @@ Run script as:
 <!-- + __-data_label__ the student training data file with labels
 + __-data_unlabel__ the student training data file with no label -->
 
-<b>Parameters:</b>
-
-Student network:
+<i>Student network:</i>
 + __-lr__ learning rate, default 0.01
 + __-ep__ epochs, default 200
 + __-bs__ batch size, default 8
 + __-layers__ #layers, default 2
 + __-hiddim__ #hidden units, default 8
 
-TTL network:
+<i>TTL network:</i>
 + __-lrTTL__ learning rate, default 0.01
 + __-epTTL__ epochs, default 500
 + __-bsTTL__ batch size, default 8
 + __-layersTTL__ #layers, default 2
 + __-hiddimTTL__ #hidden units, default 8
 
-Other parameters:
+<i>Others:</i>
 + __-inputsize__ #features, default 1
 + __-seed__ set seed for reproduction, default 0
 + __-plabel__ propotion of available labeled data (range = [0,1]), default 0.2
