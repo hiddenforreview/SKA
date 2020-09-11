@@ -37,7 +37,7 @@ Run script as:
 
 + __Student network:__
   + __-lr__ : learning rate, default 0.01
-  + __-ep__ : epochs, default 200
+  + __-ep__ : epochs, default 500
   + __-bs__ : batch size, default 8
   + __-layers__ : #layers, default 2
   + __-hiddim__ : #hidden units, default 8
