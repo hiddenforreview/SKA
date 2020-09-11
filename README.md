@@ -15,6 +15,7 @@ Prepared folders:
 + __teachers__ : contains teacher models
 + __output__ : directory for training logs and the final student model if saved
     + __plot__ : directory for training loss plots
+
 Note that all datasets and teachers used in the paper can be found here: https://drive.google.com/drive/folders/1guPbiUawDvVrkhZXQvMZPS4blGosZiWW?usp=sharing
 
 Run script as:
