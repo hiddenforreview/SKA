@@ -9,6 +9,13 @@ Anonymous repository for Semi-Supervised Knowledge Amalgamation for Sequence Cla
 
 ## Instructions on training TCom
 
+Prepared folders:
+
++ __data__ : contains training data
++ __teachers__ : contains teacher models
++ __output__ : directory for training logs and the final student model if saved
+    + __plot__ : directory for training loss plots
+
 Run script as:
 
     python main.py -expname syn_exp1 -t_model ./teachers/exp1_syn_t1.sav ./teachers/exp1_syn_t2.sav \
