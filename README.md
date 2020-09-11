@@ -45,5 +45,5 @@ Run script as:
 + __Others:__
   + __-inputsize__ : #features, default 1
   + __-seed__ : set seed for reproduction, default 0
-  + __-plabel__ : propotion of available labeled data (range = [0,1]), default 0.2
+  + __-plabel__ : propotion of available labeled data (range = [0,1]), default 0.02
   + __--save__ : boolean parameters, whether to save the student model, default false
