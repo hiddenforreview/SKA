@@ -7,7 +7,7 @@ Anonymous repository for Semi-Supervised Knowledge Amalgamation for Sequence Cla
 + __model.py__ : Supporting models
 + __utils.py__ : Supporting functions
 
-## Instructions on training TCom
+## Instructions on training TC
 
 Prepared folders:
 
