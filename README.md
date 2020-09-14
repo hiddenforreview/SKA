@@ -6,6 +6,7 @@ Anonymous repository for Semi-Supervised Knowledge Amalgamation for Sequence Cla
 + __main.py__ : Main code for TC training
 + __model.py__ : Supporting models
 + __utils.py__ : Supporting functions
++ __requirements.txt__ : Library requirements
 
 ## Instructions on training TC
 
