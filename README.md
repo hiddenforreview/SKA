@@ -1,5 +1,6 @@
-# TC for SKA
-Anonymous repository for Semi-Supervised Knowledge Amalgamation for Sequence Classification via Teacher Coordinator (TC) 
+# SKA
+Anonymous repository for <i>Semi-Supervised Knowledge Amalgamation for Sequence Classification</i>.
+This repository contains the implementation for the first solution for SKA, named <i>Teacher Coordinator (TC)</i>. 
 
 ## File listing
 
