@@ -58,3 +58,15 @@ Run script as:
   + __-seed__ : set seed for reproduction, default 0
   + __-plabel__ : proportion of available labeled data (range = [0,1]), default 0.02
   + __--save__ : boolean parameters, whether to save the student model, default false
+  
+  
+## Case Studies
+we have experimented with two Teacher models on the SYN dataset with 2% labeling, as described below. We found that the values computed at each step exactly match the intuition of the method. We describe these case studies below.
+
+In this first experiment, we have access to two Teachers. Teacher 1 (T1) specializes in Classes A, B, C, and D while Teacher 2 (T2) specializes in Classes C, D, E, and F. Their expertise overlaps only on Classes C and D.
+
+First, we showcase the Teacher Trust Learner (TTL) overcoming an overconfident teacher via an example from Class E, on which only T2 is an expert. T1 predicts P(y_j | y_j \in Y_k, X) = [0, 0, .99, 0, 0, 0] (confidently-wrong prediction of Class C), while T2 predicts [0, 0, 0, 0, .99, 0] (confidently-correct prediction of Class E). Then, the TTL predicts P(y_j \in Y_k∣X) = [.27,.73], indicating that T2 should be trusted more than T1 (correctly). Finally, rescaling via P(y_j ∣y_j \in Y_k, X)*P(y_j \in Y_k∣X) and combining the teachers’ predictions: .27*﻿[0, 0, .99, 0, 0,0] + .73*﻿[0, 0, 0, 0, .99, 0] = [0, 0, .27, 0, .72, 0], which serves as the surrogate target for the student network. This example clearly shows the TTL overcoming an overconfident teacher (T1) to provide a good surrogate target.
+
+Second, we showcase the TTL effectively preserving accurate predictions for an instance for which both Teachers are experts. On an instance from Class D, T1 predicts P(y_j | y_j \in Y_k, X) = [0, 0, 0, .99, 0, 0] (correct), while T2 also predicts [0, 0, 0, .99, 0, 0] (correct). Then, the TTL predicts P(y_j \in Y_k∣X) = [.5, .5], indicating the teachers should be trusted equally (correct). Finally, rescaling and combining the teachers’ predictions we have the perfect surrogate label: [0, 0, 0, .99, 0, 0].
+
+Third, we showcase an instance from Class A, where Teacher 1 is an expert but Teacher 2 is neither an expert nor confident. T1 predicts P(y_j | y_j \in Y_k, X) = [.99, 0, 0, 0, 0, 0] (correct), while T2 predicts [0, 0, .63, .02, 0, .34] (incorrect). Then, the TTL predicts P(y_j \in Y_k∣X) = [.72, .28], indicating that T1 should be trusted more than T2 (correctly). Finally, the surrogate label after rescaling and combining the teachers’ predictions is [.71, 0, .18, .01,. 10] leading the student model to the right direction.
