@@ -63,7 +63,7 @@ Run script as:
 ## Case Studies
 we have experimented with two Teacher models on the SYN dataset with 2% labeling, as described below. We found that the values computed at each step exactly match the intuition of the method. We describe these case studies below.
 
-In this first experiment, we have access to two Teachers. Teacher 1 (T1) specializes in Classes A, B, C, and D while Teacher 2 (T2) specializes in Classes C, D, E, and F. Their expertise overlaps only on Classes C and D.
+In this experiment, we have access to two Teachers. Teacher 1 (T1) specializes in Classes A, B, C, and D while Teacher 2 (T2) specializes in Classes C, D, E, and F. Their expertise overlaps only on Classes C and D.
 
 First, we showcase the Teacher Trust Learner (TTL) overcoming an overconfident teacher via an example from Class E, on which only T2 is an expert. T1 predicts P(y_j | y_j \in Y_k, X) = [0, 0, .99, 0, 0, 0] (confidently-wrong prediction of Class C), while T2 predicts [0, 0, 0, 0, .99, 0] (confidently-correct prediction of Class E). Then, the TTL predicts P(y_j \in Y_k∣X) = [.27,.73], indicating that T2 should be trusted more than T1 (correctly). Finally, rescaling via P(y_j ∣y_j \in Y_k, X)P(y_j \in Y_k∣X) and combining the teachers’ predictions: .27[0, 0, .99, 0, 0,0] + .73[0, 0, 0, 0, .99, 0] = [0, 0, .27, 0, .72, 0], which serves as the surrogate target for the student network. This example clearly shows the TTL overcoming an overconfident teacher (T1) to provide a good surrogate target.
 
